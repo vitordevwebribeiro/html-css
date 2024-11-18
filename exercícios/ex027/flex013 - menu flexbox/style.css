@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
@@ -11,21 +11,47 @@ body {
     font-size: 1em;
     background-color: lightgray;
     height: 100vh;
-    width: 100vh;
+    width: 100vw;
 }
 
 header {
     background-color: grey;
     color: white;
     padding: 10px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header > h1 {
     border: 1px dotted black;
+    flex: 0 0 200px;
 }
 
 header > nav {
     border: 1px dotted black;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+
+header > nav > a {
+    background-color: rgba(0, 0, 0, 0.356);
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+header > nav > a:hover {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.356);
+    transition: background-color .5s;
 }
 
 main {
